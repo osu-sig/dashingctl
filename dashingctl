@@ -16,7 +16,7 @@ case "$1" in
         ;;
     stop)
         echo "Stopping Dashing"
-        cd $DASHING_DIR; dashing stop
+        cd $DASHING_DIR; bundle exec thin stop
         ;;
     restart)
         cd $DASHING_DIR; bundle exec thin restart -p80 -e production
