@@ -1,6 +1,7 @@
 ## init.rd script for dashing dashboard
 
 ### Configure
+* edit dashingctl and update DASHING_DIR variable to point at your dashboard directory
 * mv dashingctl /etc/init.d/dashingctl
 * chown +x /etc/init.d/dashingctl
 * chkconfig --level 345 dashingctl on
