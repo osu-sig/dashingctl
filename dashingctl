@@ -29,10 +29,9 @@ case "$1" in
         else
             echo "Dashing is not running"
         fi
-
         ;;
     *)
-        echo "Dashing"
+        echo "Dashing Control Script"
         echo $"Usage: $0 {start|stop|restart|status}"
         exit 1
 esac
