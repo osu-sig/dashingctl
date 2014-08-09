@@ -1,11 +1,13 @@
 #! /bin/sh
-# Dashing Dashboard init script
 #
-# chkconfig: 35 20 80
+# Simple control script for a dashing dashboard 
+# https://github.com/Shopify/dashing
+#
+# chkconfig: 345 20 80
 # description: Dashing dashboard control script
 
 DASHING_DIR=/opt/dashboard
-PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
 case "$1" in
     start)
