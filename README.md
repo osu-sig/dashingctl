@@ -6,7 +6,7 @@
 
 ### Configure 
 * edit dashingctl and update DASHING_DIR variable to point at your dashboard directory
-* mv dashingctl /etc/init.d/dashingctl
+* cp dashingctl /etc/init.d/dashingctl
 * chmod 0755 /etc/init.d/dashingctl
 * chkconfig --add dashingctl
 * chkconfig --level 345 dashingctl on
