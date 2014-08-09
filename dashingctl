@@ -8,6 +8,7 @@
 
 DASHING_DIR=/opt/dashboard
 PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+THIN_PID=$(lsof -i :80 | awk '{print $2}' | tail -n1)
 
 case "$1" in
     start)
@@ -23,7 +24,6 @@ case "$1" in
         cd $DASHING_DIR; bundle exec thin restart -p80 -e production
         ;;
     status)
-        THIN_PID=$(lsof -i :80 | awk '{print $2}' | tail -n1)
         if [ "$THIN_PID" != "" ]; then
             echo "Dashing is running with pid $THIN_PID"
         else
